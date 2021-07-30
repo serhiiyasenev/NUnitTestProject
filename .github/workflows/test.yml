@@ -24,4 +24,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --filter FullyQualifiedName~LoginTest --no-build --verbosity minimal 
+      run: dotnet test --filter FullyQualifiedName~VerifyMenuItemsCountText --no-build --verbosity detailed 
