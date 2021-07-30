@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: setup-chromedriver
-      uses: nanasess/setup-chromedriver@835cae695490330a7e390033b2b5bd67e6f8055e
+      uses: nanasess/setup-chromedriver@master
     - name: Build
       run: dotnet build --no-restore
     - name: Test
