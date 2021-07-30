@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -19,6 +19,8 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: setup-chromedriver
+      uses: nanasess/setup-chromedriver@835cae695490330a7e390033b2b5bd67e6f8055e
     - name: Build
       run: dotnet build --no-restore
     - name: Test
