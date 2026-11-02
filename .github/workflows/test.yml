@@ -12,15 +12,15 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: setup-chromedriver
-      uses: nanasess/setup-chromedriver@master
+      uses: nanasess/setup-chromedriver@904b949d6a9e6f5bb87b61ba516e716ddcc1ff8c
     - name: Build
       run: dotnet build --no-restore
     - name: Test
