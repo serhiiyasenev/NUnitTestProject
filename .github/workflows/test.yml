@@ -19,8 +19,6 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: setup-chromedriver
-      uses: nanasess/setup-chromedriver@904b949d6a9e6f5bb87b61ba516e716ddcc1ff8c
     - name: Build
       run: dotnet build --no-restore
     - name: Test
